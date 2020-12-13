@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    @using dojoSurvey.Models
+    @model Survey
+
+    <div id="main">
+        <h2>Submitted Info</h2>
+        <div class="section">
+            <div class="column">
+                <p>Name: </p>
+                <p>Dojo Location:</p>
+                <p>Favorite Language:</p>
+                <p>Comment:</p>
+            </div>
+            <div class="column">
+                <p>@Model.name</p>
+                <p>@Model.dojo</p>
+                <p>@Model.language</p>
+                <p>@Model.comment</p>
+            </div>
+        </div>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
