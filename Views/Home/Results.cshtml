@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Results</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <h2>Submitted Info</h2>
+        <div class="section">
+            <div class="column">
+                <p>Name: </p>
+                <p>Dojo Location:</p>
+                <p>Favorite Language:</p>
+                <p>Comment:</p>
+            </div>
+            <div class="column">
+                <p>@ViewBag.name</p>
+                <p>@ViewBag.dojo</p>
+                <p>@ViewBag.language</p>
+                <p>@ViewBag.comment</p>
+            </div>
+        </div>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+
+</html>

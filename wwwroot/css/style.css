@@ -1,0 +1,36 @@
+body{
+    font-family: sans-serif;
+    width: 960px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+#main{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.section{
+    display: flex;
+}
+div{
+    margin: 0px 5px;
+}
+p{
+    height: 22px;
+}
+select{
+    width: 155px;
+}
+h2{
+    text-decoration: underline;
+}
+a, button{
+    border: 1px solid black;
+    color: black;
+    background-color: lightblue;
+    border-radius: 2px;
+    padding: 2px;
+    text-decoration: none;
+    font-size: medium;
+}
