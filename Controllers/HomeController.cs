@@ -16,18 +16,26 @@ namespace dojoSurvey.Controllers
         [HttpPost("survey")]
         public IActionResult SurveyResults(Survey results)
         {
-            // Survey results = new Survey()
-            // {
-            //     name = name,
-            //     dojo = dojo,
-            //     language = language,
-            //     comment = comment,
-            // };
-            // ViewBag.name = name;
-            // ViewBag.dojo = dojo;
-            // ViewBag.language = language;
-            // ViewBag.comment = comment;
             return View("Survey",results);
+        }
+
+        [HttpPost("survey/create")]
+        public IActionResult Create(Survey user)
+        {
+            if (ModelState.IsValid)
+            {
+                // do somethng!  maybe insert into db?  then we will redirect
+                return View("Survey", user);
+            }
+            else
+            {
+                // Oh no!  We need to return a ViewResponse to preserve the ModelState, and the errors it now contains!
+                return View("Index");
+            }
+        }
+        public IActionResult Success(Survey user)
+        {
+            return View("Survey", user);
         }
     }
 }

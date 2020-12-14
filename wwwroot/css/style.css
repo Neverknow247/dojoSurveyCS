@@ -12,6 +12,8 @@ body{
 }
 .section{
     display: flex;
+    justify-content: space-between;
+    max-width: 300px;
 }
 div{
     margin: 0px 5px;

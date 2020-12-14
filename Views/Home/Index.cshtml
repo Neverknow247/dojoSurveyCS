@@ -9,22 +9,28 @@
 </head>
 
 <body>
+    @model Survey
     <div id="main">
-        <form action="/survey" method="POST">
-            <div class="section">
-                <div class="column">
-                    <p>Name:</p>
-                    <p>Dojo Location</p>
-                    <p>Favorite Language</p>
+        <form asp-action="Create" asp-controller="Home" method="POST">
+            <div class="content">
+                <span asp-validation-for="name"></span>
+                <div class="section">
+                    <p><label asp-for="name"></label></p>
+                    <p><input asp-for="name"></p>
                 </div>
-                <div class="column">
-                    <p><input type="text" name="name"></p>
+                <span asp-validation-for="dojo"></span>
+                <div class="section">
+                    <p><label asp-for="dojo"></label></p>
                     <p>
-                        <select name="dojo">
+                        <select asp-for="dojo">
                             <option value="Chicago">Chicago</option>
                             <option value="San Jose">San Jose</option>
                         </select>
                     </p>
+                </div>
+                <span asp-validation-for="language"></span>
+                <div class="section">
+                    <p><label asp-for="language"></label></p>
                     <p>
                         <select name="language">
                             <option value="C#">C#</option>
@@ -36,15 +42,16 @@
             </div>
             <div class="section">
                 <div>
-                    <p>Comment (optional):</p>
+                    <p><label asp-for="comment"></label></p>
                 </div>
             </div>
             <div class="section">
                 <div>
-                    <textarea name="comment" cols="30" rows="5"></textarea>
+                    <textarea asp-for="comment" cols="30" rows="5"></textarea>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <input value="Add User" type="submit">
+            @* <button type="submit">Submit</button> *@
         </form>
     </div>
 </body>
